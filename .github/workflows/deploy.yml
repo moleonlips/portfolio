@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'  # Updated to Node.js 18
           cache: 'npm'
 
       - name: Create .env file
@@ -28,7 +28,7 @@ jobs:
           echo "VITE_EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> .env
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build Project
         run: npm run build
