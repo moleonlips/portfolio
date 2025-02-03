@@ -5,12 +5,18 @@ body {
     padding: 0;
     background: #f4f4f4;
     color: #333;
+    scroll-behavior: smooth;
 }
 
 header {
     background: #0073e6;
     color: white;
-    padding: 40px 20px;
+    padding: 50px 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.highlight {
+    color: yellow;
 }
 
 .btn {
@@ -22,6 +28,11 @@ header {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
 }
 
 #projects {
@@ -37,10 +48,36 @@ header {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-5px);
 }
 
 .project img {
     width: 100%;
+    border-radius: 5px;
+}
+
+#contact {
+    padding: 30px;
+    background: #f8f8f8;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+#contact-form input, 
+#contact-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 

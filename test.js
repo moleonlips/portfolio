@@ -1,0 +1,1 @@
+console.log(process.env.EMAILJS_USER_ID)
